@@ -3,6 +3,35 @@ import invariant from "tiny-invariant";
 import { usePrevProps } from "../../hooks/usePrevProps";
 import { useBoard } from "../Board";
 import "./tile.less";
+import hugh from '../../images/hugh.jpeg'
+import kevin from '../../images/kevin.jpeg'
+import frankie from '../../images/frankie.jpeg'
+import harry from '../../images/harry.jpeg'
+import joe from '../../images/joe.jpeg'
+import logan from '../../images/logan.jpeg'
+import maya from '../../images/maya.jpeg'
+import michael from '../../images/michael.jpeg'
+import ryan from '../../images/ryan.jpeg'
+import bharat from '../images/lightskin.jpeg'
+import jacob from '../../images/jacob.jpeg'
+
+interface dataFace  {
+  [key: number]: string
+}
+
+const data: dataFace = {
+  2: hugh,
+  4: kevin,
+  8: frankie,
+  16: harry,
+  32: joe,
+  64: logan,
+  128: maya,
+  256: michael,
+  512: ryan,
+  1024: jacob
+  // 2048: bharat
+}
 
 type Props = {
   // tile value - 2, 4, 8, 16, 32, ..., 2048.∂
@@ -59,7 +88,7 @@ export const Tile = ({ value, position, zIndex }: Props) => {
 
   return (
     <div className={`tile tile-${value}`} style={style}>
-      {value}
+        <img src = {data[value]} width = '100px' height = '100px' />
     </div>
   );
 };
