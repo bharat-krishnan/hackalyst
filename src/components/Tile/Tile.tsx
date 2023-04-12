@@ -9,10 +9,10 @@ import frankie from '../../images/frankie.jpeg'
 import harry from '../../images/harry.jpeg'
 import joe from '../../images/joe.jpeg'
 import logan from '../../images/logan.jpeg'
-import maya from '../../images/maya.jpeg'
+import dami from '../../images/dami.jpeg'
 import michael from '../../images/michael.jpeg'
 import ryan from '../../images/ryan.jpeg'
-import bharat from '../images/lightskin.jpeg'
+import bharat from '../../images/lightskin.jpg'
 import jacob from '../../images/jacob.jpeg'
 
 interface dataFace  {
@@ -26,11 +26,11 @@ const data: dataFace = {
   16: harry,
   32: joe,
   64: logan,
-  128: maya,
+  128: dami,
   256: michael,
   512: ryan,
-  1024: jacob
-  // 2048: bharat
+  1024: jacob,
+  2048: bharat,
 }
 
 type Props = {
